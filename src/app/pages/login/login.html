@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="login-wrapper">
+  <form class="login-form" [formGroup]="signupForm" (ngSubmit)="gotoHomePage()">
+    <h2>Welcome</h2>
+    <label for="name">Enter your name</label>
+    <input type="text" id="name" placeholder="e.g. Arpan" formControlName="name" />
+    
+    <div class="error" *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.invalid">
+      <small *ngIf="signupForm.get('name')?.errors?.['required']">Name is required.</small>
+      <small *ngIf="signupForm.get('name')?.errors?.['maxlength']">Max 10 characters allowed.</small>
+      <small *ngIf="signupForm.get('name')?.errors?.['pattern']">Only letters allowed.</small>
+    </div>
+
+    <button type="submit" [disabled]="signupForm.invalid">Enter</button>
+    <button type="button" class="exit" (click)="exitPage()">Exit</button>
+  </form>
+</div>
