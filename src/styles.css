@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1f1f1f;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --tag-bg: #292929;
+  --tag-text: #00ffd5;
+  --accent: #00ffd5;
+}
+
+body.light-theme {
+  --bg-primary: #f0f0f0;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #444444;
+  --tag-bg: #e6e6e6;
+  --tag-text: #0077b5;
+  --accent: #0077b5;
+}
+
+body.dark-theme {
+  --bg-primary: #121212;
+  --bg-secondary: #1f1f1f;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --tag-bg: #292929;
+  --tag-text: #00ffd5;
+  --accent: #00ffd5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.navbar {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+  color: #000;
+}

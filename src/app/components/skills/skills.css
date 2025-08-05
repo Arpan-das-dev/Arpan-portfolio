@@ -1,0 +1,125 @@
+.skills-wrapper {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, var(--bg-secondary), transparent);
+  animation: fadeIn 0.8s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skills-wrapper h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.skills-category {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.category-card {
+  background: var(--bg-primary);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.category-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.lang-heading { color: #ff5722; background: linear-gradient(90deg, #ff7043, #ffab91); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.framework-heading { color: #4caf50; background: linear-gradient(90deg, #66bb6a, #a5d6a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.db-heading { color: #2196f3; background: linear-gradient(90deg, #42a5f5, #90caf9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.dev-heading { color: #9c27b0; background: linear-gradient(90deg, #ba68c8, #ce93d8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card {
+  flex: 1 1 200px;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: var(--text-primary);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+
+.skill-card img {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 12px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+
+.skill-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 6px;
+  font-weight: 600;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* Hover Glows - Themed per Skill */
+.html:hover { box-shadow: 0 0 12px 2px rgba(228, 77, 38, 0.8); }
+.css:hover { box-shadow: 0 0 12px 2px rgba(41, 101, 241, 0.8); }
+.js:hover { box-shadow: 0 0 12px 2px rgba(247, 223, 30, 0.8); }
+.java:hover { box-shadow: 0 0 12px 2px rgba(244, 67, 54, 0.8); }
+.angular:hover { box-shadow: 0 0 12px 2px rgba(221, 27, 40, 0.8); }
+.spring:hover { box-shadow: 0 0 12px 2px rgba(76, 175, 80, 0.8); }
+.hibernate:hover { box-shadow: 0 0 12px 2px rgba(78, 62, 140, 0.8); }
+.mysql:hover { box-shadow: 0 0 12px 2px rgba(0, 117, 143, 0.8); }
+.vscode:hover { box-shadow: 0 0 12px 2px rgba(0, 122, 204, 0.8); }
+.intellij:hover { box-shadow: 0 0 12px 2px rgba(131, 58, 180, 0.8); }
+.eclipse:hover { box-shadow: 0 0 12px 2px rgba(44, 34, 85, 0.8); }
+.git:hover { box-shadow: 0 0 12px 2px rgba(241, 80, 47, 0.8); }
+
+/* Dark Theme Glow Control */
+body.dark-theme .skill-card:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+body.light-theme .skill-card:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Entrance Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .items {
+    flex-direction: column;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+}
